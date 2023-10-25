@@ -1,0 +1,408 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+body{
+    width: 100%;
+    
+}
+.section-p1{
+    padding: 40px 80px;
+    overflow: hidden;
+}
+#nav{
+    display: flex;
+    align-items: center;
+    background: whitesmoke;
+    justify-content: space-between;
+    position: sticky;
+    left: 0;
+    top: 0;
+    padding: 20px 80px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    width: 100%;
+}
+#nav .navlist{
+    display:flex ;
+    align-content: center;
+    justify-content: space-between;
+}
+#nav .navlist li{
+    list-style: none !important;
+    margin:0.6rem;
+}
+#nav .navlist li a{
+    text-decoration: none;
+    color:black;
+}
+#home{
+    width: 100%;
+}
+#home .content span{
+    font-size: 1.5rem;
+    font-weight: 800;
+    color:blanchedalmond;
+
+}
+#home .content h2{
+    font-size: 5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    padding: 1rem;
+    width: 30rem;
+    line-height: 1em;
+    margin-bottom: 5px; 
+    color: blanchedalmond;   
+}
+#home .content .btn{
+    background-color: rgb(137, 86, 14);
+    text-align: center;
+    font-size: 1.5rem;
+    text-decoration: none;
+    padding: 11px 15px;
+    border-radius: 4px;
+    margin: 15px 0;
+    color:black;
+}
+#home .content .btn:hover{
+    background: blue;
+    transition: 1s;
+}
+
+#home .slide{
+    min-height: 100vh;
+    background-size: cover !important;
+    background-position: center !important;  
+    display: flex;
+    z-index: 0;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background: wheat;
+}
+#home .slide::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background: rgba(13, 13, 13, 0.765);
+
+}
+#home .slide .content{
+    text-align: center;
+}
+#about {
+    display: flex;
+    align-content: center;
+    justify-content: space-between; 
+    flex-wrap: wrap;
+    background: whitesmoke;
+    
+   
+}
+#about .image {
+    width:36rem;
+}
+
+#about .image img{
+    width: 100%;
+    border-radius: 20px;
+
+}
+
+#about .content {
+    display: flex;
+    place-content: center flex-start;
+    flex-wrap: wrap;
+    width: 36rem;
+
+}
+#about .content h2 {
+    padding: 20px 0;
+    font-weight: 900;
+   
+}
+#about .content p {
+    line-height: 1.5rem;
+    
+}
+#about .content .about-btn {
+    margin: 15px 0;
+    
+ }
+#about .content .btn {
+    background-color: rgb(137, 86, 14);
+    text-align: center;
+    font-size: 1rem;
+    text-decoration: none;
+    padding: 11px 15px;
+    border-radius: 4px;
+    margin: 15px 0;
+    color:black;    
+}
+#about .content .btn:hover{
+    background: blue;
+    transition: 1.5s;
+}
+#about .content-box {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    margin: 15px 15px;
+    width: 100%;
+}
+#about .content-box .icon{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width:10rem;
+    box-shadow: 20px 20px 30px rgba(0,0,0,0.02) ;
+    margin: 0 5px; 
+    background: white; 
+}
+#about .content-box .icon h3{
+   font-size: 15px;
+   text-align: center; 
+   font-weight: 500;
+   padding-bottom: 0.6rem
+}
+#about .content-box .icon img{
+    width: 100%;
+}
+#food {
+        background: rgb(243, 238, 238);
+        overflow: hidden;
+}
+#food .heading{
+    text-align: center;
+    padding-top: 1.5rem;
+}
+#food .heading span{
+    font-size: 1.5rem;
+}
+#food .heading h2{
+    font-size: 2.2rem;
+    margin-top: 0.9rem;
+}
+#food .swiper-wrapper{
+    margin: 2rem 0;
+}
+#food .slide{
+    text-align: center;
+    transform: scale(0.8);
+    opacity: 0.5; 
+    height: 25rem;  
+    border-radius: 0.5rem;
+    cursor: pointer;
+    
+}
+#food .swiper-slide-active{
+    transform: scale(0.9);
+    opacity: 1;
+    background:white;
+    box-shadow:1px -1px 0px 7px rgba(234,228,240,1);
+}  
+
+#food .slide img{
+    height:19rem;
+    margin: 1rem 0;
+}
+#food  .food-slider .slide h3{
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+
+}
+#food .food-slider .slide span{
+    font-size: 2rem;
+    margin: 2rem 0;
+    color: rgb(215, 128, 22);
+    font-weight: 80;
+
+}
+#food .swiper-pagination{
+    position: relative;
+    
+}
+.food-preview-container{
+    background: black;
+    position: fixed;
+    top:0;
+    left: 0;
+    width:100%;
+    height: 100%;
+    opacity: 0.89;
+    z-index: 1100;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+.food-preview-container .food-preview{
+    text-align: center;
+    background: white ;
+    padding: 3rem 2rem;
+    border-radius: .8rem;
+    width: 25rem;
+    display:none;
+
+}
+.food-preview-container .food-preview .btn {
+    background-color: rgb(137, 86, 14);
+    font-size: 1rem;
+    text-decoration: none;
+    padding: 0.5rem 0.3rem;
+    border-radius: 4px;
+    margin: 15px 0;
+    color:black; 
+  }
+  .food-preview-container .food-preview.active{
+    display: inline-block;
+  }
+  .food-preview-container .food-preview img{
+    height: 8rem;
+  }
+  .food-preview-container .food-preview h3{
+    font-size: 1rem;
+    padding: 0.5rem 0;
+  }
+  .food-preview-container .food-preview .star{
+    margin: 0.5rem 0;
+  }
+  .food-preview-container .food-preview .star i{
+    font-size:1.2rem;
+    color: rgb(137, 86, 14);
+  }
+  .food-preview-container .food-preview p{
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+    padding: 0.5rem 0;
+  }
+  .food-preview-container .food-preview .price{
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  #close-preview{
+    color: antiquewhite;
+    position: absolute;
+    font-size: 4rem;
+    top: 1.5rem;
+    right: 2.5rem;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  #close-preview:hover {
+    transform: rotate(90deg);
+  }
+  #gallery {
+    text-align: center;
+  }
+  #gallery .gallery-container{
+    display: grid;
+    grid-template-columns:auto auto auto ;
+    gap: 1rem;
+
+  }
+  #gallery .gallery-container .box{
+    height: 20rem;
+    width: 25rem;
+    overflow: hidden;
+    position: relative;
+  }
+  #gallery .gallery-container .box img{
+    width: 100%;
+    height: 100%;
+    padding: 0.5rem 0;
+    object-fit: cover;
+  }
+  #gallery .gallery-container .box .icon{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left:0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.7;
+  }
+  #gallery .gallery-container .box .icon i{
+    font-size: 6rem;
+    color: white;
+  }
+  #gallery .gallery-container .box:hover .icon{
+    display: flex;
+  }
+
+#menu .Subtitle{
+    text-align: center;
+  }
+#menu .slide .title{
+  text-align: center;
+  font-size: 2rem;
+  padding: 0.5rem;
+  background: orangered;
+}
+#menu .menu-wraper{
+    margin: 2rem 0;
+  }
+  #menu .menu-wraper .menu-slider .slide{
+    margin: 2rem 0;
+  }
+#menu .menu-wraper .menu-slider .slide .box-container{
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:space-between;
+  width: 100%;
+  align-items: center;
+
+}
+#menu .slide .box-container .box{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 36rem;
+  margin-bottom: 1rem;
+  border: 1px solid blanchedalmond;
+  box-shadow: 0 0 0.5rem rgba(0,0,0,0.6);
+  padding: 0 2rem;
+}
+
+#menu .menu-wraper .menu-slider .slide .box-container .box .info{
+   padding: 0rem 1rem;
+   font-size: 0.7rem;
+}
+#menu .heading{
+  text-align: center;
+  padding-top: 1.5rem;
+}
+#menu .heading span{
+  font-size: 1.5rem;
+}
+#menu .heading h2{
+  font-size: 2.2rem;
+  margin-top: 0.9rem;
+}
+
+#gallery span{
+  font-size: 1.5rem;
+  padding: 2rem 0;
+}
+#gallery h2{
+  font-size: 2.2rem;
+  padding:2rem  0;
+}
+footer{
+  background-color: whitesmoke;
+}
+ 
+ 
